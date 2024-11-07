@@ -8,6 +8,6 @@
 
 
 
-## nstalar dependencias
+### Instalar dependencias
 
 `$ npm install`
