@@ -1,0 +1,32 @@
+---
+import { ArrowDown } from 'lucide-react';
+---
+
+<section id="home" class="min-h-screen flex items-center justify-center bg-black relative">
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-primary/20"></div>
+  </div>
+  
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+        Hola, soy <span class="text-primary">Danilson Santana</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8">
+        Desarrollador Full Stack Junior
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full transition-colors">
+          Contáctame
+        </a>
+        <a href="#projects" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full transition-colors">
+          Ver Proyectos
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <ArrowDown className="text-primary" size={32} />
+  </a>
+</section>

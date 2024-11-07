@@ -1,0 +1,32 @@
+---
+const skills = [
+  { category: "Frontend", items: ["HTML5", "CSS3", "JavaScript", "React", "TypeScript", "Tailwind CSS"] },
+  { category: "Backend", items: ["Node.js", "Express", "Python", "SQL"] },
+  { category: "Herramientas", items: ["Git", "VS Code", "Docker", "Postman"] },
+  { category: "Soft Skills", items: ["Trabajo en equipo", "Comunicación", "Resolución de problemas", "Adaptabilidad"] }
+];
+---
+
+<section id="skills" class="py-20 bg-black">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-white mb-16">
+      Mis <span class="text-primary">Habilidades</span>
+    </h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {skills.map((skillGroup) => (
+        <div class="bg-black/50 p-6 rounded-lg border border-primary/20">
+          <h3 class="text-xl font-semibold text-primary mb-4">{skillGroup.category}</h3>
+          <ul class="space-y-2">
+            {skillGroup.items.map((skill) => (
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

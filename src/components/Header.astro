@@ -1,0 +1,42 @@
+---
+import { Menu } from 'lucide-react';
+---
+
+<header class="fixed w-full bg-black/90 backdrop-blur-sm z-50">
+  <nav class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="#home" class="text-primary text-2xl font-bold">HOPSiE<span class="text-white">Dev</span></a>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="text-white hover:text-primary transition-colors">Inicio</a>
+        <a href="#about" class="text-white hover:text-primary transition-colors">Sobre mí</a>
+        <a href="#projects" class="text-white hover:text-primary transition-colors">Proyectos</a>
+        <a href="#skills" class="text-white hover:text-primary transition-colors">Habilidades</a>
+        <a href="#contact" class="text-white hover:text-primary transition-colors">Contacto</a>
+      </div>
+
+      <button id="menu-btn" class="md:hidden text-white">
+        <Menu size={24} />
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <div class="flex flex-col space-y-4">
+        <a href="#home" class="text-white hover:text-primary transition-colors">Inicio</a>
+        <a href="#about" class="text-white hover:text-primary transition-colors">Sobre mí</a>
+        <a href="#projects" class="text-white hover:text-primary transition-colors">Proyectos</a>
+        <a href="#skills" class="text-white hover:text-primary transition-colors">Habilidades</a>
+        <a href="#contact" class="text-white hover:text-primary transition-colors">Contacto</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
